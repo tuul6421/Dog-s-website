@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaLine } from 'react-icons/fa';
 import { FiMail, FiMapPin, FiHeart } from 'react-icons/fi';
 
 export default function Footer() {
@@ -20,6 +20,9 @@ export default function Footer() {
               </a>
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="social-btn" title="TikTok">
                 <FaTiktok size={18} />
+              </a>
+              <a href="https://line.me/R/ti/p/@wanwanfashion" target="_blank" rel="noopener noreferrer" className="social-btn social-btn-line" title="LINE">
+                <FaLine size={18} />
               </a>
             </div>
           </div>

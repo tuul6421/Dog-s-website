@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaLine } from 'react-icons/fa';
 
 export default function HeroBanner() {
   return (
@@ -75,6 +75,9 @@ export default function HeroBanner() {
             </a>
             <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="hero-social-btn">
               <FaTiktok size={18} /> TikTok
+            </a>
+            <a href="https://line.me/R/ti/p/@wanwanfashion" target="_blank" rel="noopener noreferrer" className="hero-social-btn hero-social-line">
+              <FaLine size={18} /> LINE
             </a>
           </motion.div>
         </motion.div>

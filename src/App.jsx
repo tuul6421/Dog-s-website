@@ -4,6 +4,7 @@ import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
+import LineFloatingButton from './components/LineFloatingButton';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetail from './pages/ProductDetail';
@@ -36,6 +37,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <LineFloatingButton />
       </CartProvider>
     </Router>
   );

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaLine } from 'react-icons/fa';
 import { FiHeart, FiStar, FiAward } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +30,7 @@ export default function About() {
               <div className="about-social-links">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline"><FaInstagram /> @wanwan_fashion</a>
                 <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline"><FaTiktok /> @wanwan_fashion</a>
+              <a href="https://line.me/R/ti/p/@wanwanfashion" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-line"><FaLine /> LINE友だち追加</a>
               </div>
             </motion.div>
           </div>

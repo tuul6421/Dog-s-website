@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiShoppingBag, FiMenu, FiX } from 'react-icons/fi';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaLine } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -54,6 +54,9 @@ export default function Navbar() {
           <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="nav-social-link" title="TikTok">
             <FaTiktok />
           </a>
+          <a href="https://line.me/R/ti/p/@wanwanfashion" target="_blank" rel="noopener noreferrer" className="nav-social-link nav-line-link" title="LINE">
+            <FaLine />
+          </a>
           <button className="cart-button" onClick={toggleCart} aria-label="カート">
             <FiShoppingBag size={20} />
             {totalItems > 0 && (
@@ -99,6 +102,7 @@ export default function Navbar() {
             <div className="mobile-social">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} /> Instagram</a>
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"><FaTiktok size={20} /> TikTok</a>
+              <a href="https://line.me/R/ti/p/@wanwanfashion" target="_blank" rel="noopener noreferrer"><FaLine size={20} /> LINE</a>
             </div>
           </motion.div>
         )}

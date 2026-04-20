@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiShoppingBag, FiHeart, FiShare2, FiChevronLeft } from 'react-icons/fi';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaLine } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
 import SizeGuide from '../components/SizeGuide';
 import ProductCard from '../components/ProductCard';
@@ -154,6 +154,14 @@ export default function ProductDetail() {
                 className="share-btn"
               >
                 <FaTiktok size={18} />
+              </a>
+              <a
+                href={`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="share-btn share-btn-line"
+              >
+                <FaLine size={18} />
               </a>
               <button
                 className="share-btn"
