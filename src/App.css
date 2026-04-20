@@ -69,6 +69,19 @@
   transition: all var(--transition-fast);
 }
 .nav-social-link:hover { color: var(--color-primary); }
+.nav-line-login-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: #06C755; color: #fff;
+  border: none; border-radius: 20px;
+  padding: 6px 14px; font-size: 0.82rem; font-weight: 600;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.nav-line-login-btn:hover { opacity: 0.85; }
+.nav-user { display: flex; align-items: center; gap: 8px; }
+.nav-user-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+.nav-user-name { font-size: 0.85rem; font-weight: 600; max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav-logout-btn { background: none; border: 1px solid var(--border-color); border-radius: 12px; padding: 4px 10px; font-size: 0.75rem; cursor: pointer; color: var(--text-muted); transition: all 0.2s; }
+.nav-logout-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
 .cart-button {
   position: relative;
   width: 44px;

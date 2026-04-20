@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CartProvider } from './context/CartContext';
+import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
@@ -22,6 +23,7 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
+      <AuthProvider>
       <CartProvider>
         <ScrollToTop />
         <Navbar />
@@ -39,6 +41,7 @@ function App() {
         <Footer />
         <LineFloatingButton />
       </CartProvider>
+      </AuthProvider>
     </Router>
   );
 }

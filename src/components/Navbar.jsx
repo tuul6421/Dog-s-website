@@ -3,12 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { FiShoppingBag, FiMenu, FiX } from 'react-icons/fi';
 import { FaInstagram, FaTiktok, FaLine } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const { toggleCart, totalItems } = useCart();
+  const { user, isReady, login, logout } = useAuth();
   const location = useLocation();
 
   useEffect(() => {
@@ -57,6 +59,19 @@ export default function Navbar() {
           <a href="https://line.me/R/ti/p/@wanwanfashion" target="_blank" rel="noopener noreferrer" className="nav-social-link nav-line-link" title="LINE">
             <FaLine />
           </a>
+          {isReady && (
+            user ? (
+              <div className="nav-user">
+                <img src={user.pictureUrl} alt={user.displayName} className="nav-user-avatar" />
+                <span className="nav-user-name">{user.displayName}</span>
+                <button className="nav-logout-btn" onClick={logout}>ログアウト</button>
+              </div>
+            ) : (
+              <button className="nav-line-login-btn" onClick={login}>
+                <FaLine size={16} /> LINEでログイン
+              </button>
+            )
+          )}
           <button className="cart-button" onClick={toggleCart} aria-label="カート">
             <FiShoppingBag size={20} />
             {totalItems > 0 && (
